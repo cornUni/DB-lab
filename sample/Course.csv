@@ -1,0 +1,12 @@
+c#,c_name,unit,dep,c_feild
+1,mathematical,3,computer,electricity
+2,electricalcircuits,3,computer,electricity
+3,logiccircuits,3,computer,computer
+4,datastructure,3,computer,computer
+5,androidprogramming,3,computer,computer
+6,computerarchitecture,3,computer,computer
+7,electronic,3,electricity,electricity
+8,soil,3,construction,construction
+9,labdatabase,1,computer,computer
+10,enghelab,2,elahiat,elahiat
+11,mathematical,3,computer,electricity

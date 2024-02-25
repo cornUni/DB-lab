@@ -1,0 +1,58 @@
+1)
+select s_id, s_name
+from Students
+where tavg>=17 
+and
+( s_name LIKE 'a%'
+or
+s_name LIKE '%a')
+
+2)
+select t_name, t_id
+from teacher
+where t_name LIKE 'j%'
+ORDERBY t_id DESC
+
+
+3)
+update Student
+set tavg =tavg + 1
+where city LIKE 'z%' and City LIKE '%n'
+
+
+4)
+sql server:
+select TOP 20% *
+from Students
+where age>20
+ORDERBY age ASC
+---------------
+mysql:
+select *
+from Students
+where age>20
+ORDERBY age ASC
+LIMIT 20%
+
+5)
+delete
+from Students where
+s_name = "amirmohammad" and s_family = "hoseini"
+
+6)
+select s_name, s_family
+from Students INNER JOIN term ON term.s_id = Students.s_id
+where term_no = 3 and age>20
+
+7)
+select s_name
+from Students INNER JOIN term ON term.s_id = Students.s_id
+where term_no BETWEEN 1 and 3  and gender = "m" and grade>18
+
+
+8)
+select *
+from teacher natural join course
+where salary>5000000 and t_field != "computer" 
+ORDERBY t_id DESC
+

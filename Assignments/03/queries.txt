@@ -1,0 +1,56 @@
+1)
+select Student.Sname, Student.Sfamily, College.city, Student.city
+from College natural join Student natural join Sec
+where College.city != Student.city 
+-----------------------------------------
+2)
+select Pname, pfamily
+from Prof natural join Course natural join Sec
+where term = 1 and year = "1401"
+-----------------------------------------
+3)
+select Sname, Sfamily, Cname
+from Student natural join College natural join Course natural join Sec
+where Course.#clg != College.#clg
+----------------------------------------
+4)
+select Cname, Cunit, year, term, Score
+from Student natural join Course natural join Sec
+where Sname = "negar afshar" and term <2 and year<= "1401"
+------------------------------------------
+5)
+select Sname, Sfamily, Pname, clg_name, Cname, Score
+from Student natural join College natural join Course natural join Sec natural join Prof
+where Prof.p# = College.p# and score<10
+-------------------------------------------
+6)
+select Cname
+from Student natural join College natural join Course natural join Sec 
+where clg_name = "computer" and term = 1 and year = "1401" and score = ALL
+(
+select Score
+from Student natural join Sec
+where Score > 10
+)
+--------------------------------------------
+7)
+select Sname, Sfamily
+from Student natural join College natural join Sec 
+where clg_name = "computer" and term = 8 and s_avg > 16 and score = ALL
+(
+select Score
+from Student natural join Sec
+where Score >= 14
+)
+------------------------------------------------
+8)
+select clg_name
+from Student natural join College natural join Course natural join Sec 
+having count
+(
+select Sname
+from Students
+where s_avg < 12
+) > 20
+
+

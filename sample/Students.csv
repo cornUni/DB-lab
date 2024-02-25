@@ -1,0 +1,16 @@
+s_id,s_name,s_family,age,city,s_feild,gender,tavg
+1,danial,jahed,23,mashhad,software,m,18.26
+2,ahmad,ghadirzadeh,23,mashhad,software,m,17.36
+3,mahsa,ghanad,20,shiraz,hardware,f,15.13
+4,hasan,attari,22,esfahan,electricity,m,12.43
+5,elham,sadeghi,18,rasht,industry,f,16.25
+6,fatemeh,khosravi,19,zanjan,it,f,18.46
+7,saeed,yazdanian,26,tehran,software,m,19.16
+8,sajjad,aemmi,23,mashhad,software,m,16.89
+9,alireza,shahidi,21,tehran,it,m,9.75
+10,negar,kamali,20,mashhad,software,f,15.25
+11,ali,gandomi,23,tehran,harware,m,17.16
+12,nafiseh,hoseini,19,esfahan,construction,f,15.65
+13,mahdi,alizadeh,24,bushehr,industry,m,11.16
+14,mahmood,mohammadiyan,23,tabas,software,m,16.36
+15,mehrnaz,mohammadzadeh,24,tehran,construction,f,11.36

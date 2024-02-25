@@ -1,0 +1,103 @@
+1)
+select s_name, s_family
+from Students natural join Term
+where term_no = 3 and age>20
+
+2)
+
+select c_name
+from course nautral join term
+where term_no = 3
+
+
+3)
+select s_name, s_family
+from students
+where tavg = (select min(tavg) from students)
+
+4)
+select s_name
+from students natural join term
+where term_no between 1 and 3 and gender = 'm' and grade > 18
+
+5)
+select c_name
+from course natural join term
+where c_field = "electricity" and dep = "computer" and term_no = 3
+
+6)
+
+
+
+7)
+select s#, quantity
+from S natural join SP
+where city = "london"
+
+8)
+select pname, color
+from S natural join P natural join SP
+where sname = "s1"
+
+9)
+select sname, city 
+from S
+where (sname, city) not in 
+(
+slect sname, city 
+fron S natural join P natural join SP
+where color = "red"
+)
+
+10)
+select s#, pname, color
+from S natural join P natural join SP
+where weight>500 and quantity>1000 and status>20
+
+11)
+select sname, city
+from S natural join P natural join SP
+where pname in (select ALL pname
+		from P
+		where color = "red")
+
+12)
+select pname, color
+from S natural join P natural join SP
+where city in (select ALL city
+		from s
+		where city = "london")
+
+13)
+select pname, color
+from S natural join P natural join SP
+where (name, color) not in (select pname, color
+from S natural join P natural join SP
+where city in (select ALL city
+		from s
+		where city = "london"))
+
+14)
+select sname, city
+from 
+(select sname, city
+from S natural join P natural join SP
+where  pname = "p2") 
+natural join 
+(select sname, city
+from S natural join P natural join SP
+where  pname = "p4")
+
+15)
+select p# and sum(quantity)
+from P natural join SP
+group by p#
+
+16)
+select sname, sum(quantity)
+from S natural join P natural join SP
+group by sname
+
+
+
+
